@@ -1,6 +1,6 @@
 [project]
 name = "dscforge"
-version = "0.1.0"
+version = "0.1.1"
 description = "CLI tool for generating data science project templates"
 authors = [{ name = "Jacob Doan" }]
 requires-python = ">=3.8"
@@ -10,3 +10,6 @@ dependencies = [
 
 [project.scripts]
 dscforge = "dscforge.cli:main"
+
+[tool.setuptools.package-data]
+"dscforge" = ["templates/**/*"]
