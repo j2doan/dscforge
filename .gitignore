@@ -1,29 +1,29 @@
-# --- Python ---
+# Python
 __pycache__/
 *.py[cod]
 
-# --- Virtual environments ---
+# Virtual environments
 .venv/
 
-# --- Environment variables ---
+#Environment variables
 .env
 
-# --- Build / packaging ---
+# Build / packaging
 build/
 dist/
 *.egg-info/
 *.egg
 
-# --- Jupyter ---
+# Jupyter
 .ipynb_checkpoints/
 
-# --- Local dev / sandbox ---
+# Local dev / sandbox
 sandbox/
 
-# --- OS files ---
+# OS files
 .DS_Store
 Thumbs.db
 
-# --- IDEs ---
+# IDEs
 .vscode/
 .idea/

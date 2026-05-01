@@ -1,18 +1,30 @@
 # Welcome to dscforge!
 
-A tool to generate data science project templates.
+A CLI tool to quickly generate data science project templates.
 
-## Install
+## Installation
 
-`pip install dscforge`
+```bash
+pip install dscforge
+```
 
 ## Usage
 
-`dscforge my_project`
+### Step 1:
+
+Navigate to the directory where you want your project created.
+
+### Step 2:
+
+Run the command below:
+
+```bash
+dscforge <project_name>
+```
 
 ### Flags
 
-- `--template template_type` : generates using the specified template
+- `--template <template_type>` : generates using the specified template
 - `--git` : initializes git when generating the template
 
 ## Example Usages
@@ -41,7 +53,7 @@ my_project/
 ### What it’s for
 
 * Quick prototyping
-* Class assignments
+* Small coursework / assignments
 * Scratch work / experiments
 * No setup overhead
 
@@ -74,7 +86,7 @@ my_project/
 ### What it’s for
 
 * Data analysis projects
-* Coursework / assignments
+* Coursework / assignments with datasets
 * Small research projects
 * Clean separation of code and data
 

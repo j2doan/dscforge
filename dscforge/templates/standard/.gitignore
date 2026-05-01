@@ -1,15 +1,15 @@
-# --- Python ---
+# Python
 __pycache__/
 *.py[cod]
 
-# --- Virtual environment ---
+# Virtual environment
 .venv/
 
-# --- Environment variables ---
+# Environment variables
 .env
 
-# --- Jupyter ---
+# Jupyter
 .ipynb_checkpoints/
 
-# --- OS ---
+# OS
 .DS_Store
