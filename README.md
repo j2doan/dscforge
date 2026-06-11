@@ -1,6 +1,6 @@
-# Welcome to dscforge!
+# dscforge
 
-A CLI tool to quickly generate data science project templates.
+**dscforge** is a command-line tool that forges complete data science project structures from a single command. Skip the tedious setup and start every project with a clean, organized foundation. Generate anything from lightweight experiment environments to production-style project layouts with the snap of a finger!
 
 ## Installation
 
