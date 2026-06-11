@@ -8,6 +8,21 @@ import sys
 # The packages that will be installed if a venv comes with the template 
 BASE_DEPS = ["numpy", "pandas", "matplotlib", "ipykernel"]
 
+# Function to install packages using default pip or uv if avaliable
+def run_installer(deps, python_exec, cwd):
+    if shutil.which("uv"):
+        subprocess.run(
+            ["uv", "pip", "install", *deps],
+            cwd=cwd,
+            check=True
+        )
+    else:
+        subprocess.run(
+            [str(python_exec), "-m", "pip", "install", *deps],
+            cwd=cwd,
+            check=True
+        )
+
 # Function to create a project template
 def create_project(name: str, template: str, git: bool):
     """
@@ -88,25 +103,15 @@ the templates directory.")
             python_exec = sys.executable
 
         try:
-            subprocess.run(
-                [str(python_exec), "-m", "pip", "install", *deps],
-                check=True
-            )
+            run_installer(deps, python_exec, base)
             print("Successfully installed starter libraries: \
 \n(numpy, pandas, matplotlib, ipykernel)")
         except subprocess.CalledProcessError:
             print("Warning: failed to install starter libraries.")
 
         # Creating requirements.txt
-        result = subprocess.run(
-            [str(python_exec), "-m", "pip", "freeze"],
-            capture_output=True,
-            text=True,
-            check=True
-        )
-
         req_file = base / "requirements.txt"
-        req_file.write_text(result.stdout)
+        req_file.write_text("\n".join(deps) + "\n")
 
         print("Successfully generated requirements.txt")
 
