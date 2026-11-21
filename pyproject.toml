@@ -1,9 +1,9 @@
 [project]
 name = "dscforge"
-version = "0.1.2"
-description = "CLI tool for generating data science project templates"
+version = "0.1.4"
+description = "Check whether your project will work for someone else"
 authors = [{ name = "Jacob Doan" }]
-requires-python = ">=3.8"
+requires-python = ">=3.11"
 dependencies = [
     "click"
 ]
@@ -11,5 +11,15 @@ dependencies = [
 [project.scripts]
 dscforge = "dscforge.cli:main"
 
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[dependency-groups]
+dev = ["pytest"]
+
+[tool.setuptools]
+packages = ["dscforge"]
+
 [tool.setuptools.package-data]
-"dscforge" = ["templates/**/*"]
+"dscforge" = ["ai_phrases.txt", "leftover_files.txt", "known_packages.txt"]
