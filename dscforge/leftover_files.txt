@@ -1,0 +1,149 @@
+# Names of files and folders that AI agents and working notes leave behind. Used by the leftover-file rule.
+#
+# Format: one entry per line; lines starting with # are ignored.
+# - A plain name matches a file or a folder with that name anywhere in the tree, ignoring letter case
+#   (agents.md, Agents.md and AGENTS.md all match). An entry ending in .md also matches the same name ending in
+#   .txt, .yaml, .yml, .json and .toml.
+# - An entry with * is a glob over the name (*.instructions.md).
+# - An entry with / is a path pattern, matched against the path inside the project (.github/instructions).
+# A matching folder is reported once and not searched further.
+# This list prefers false alarms over misses: every hit is only "possibly a leftover". To be quieter, delete an
+# entry or put # in front of it. Add your own names at the end.
+
+# General agent instruction files
+AGENTS.md
+AGENTS.override.md
+AGENT.md
+CLAUDE.md
+CLAUDE.local.md
+GEMINI.md
+QWEN.md
+CODEX.md
+COPILOT.md
+OPENCODE.md
+CURSOR.md
+WARP.md
+CODY.md
+JULES.md
+AIDER.md
+CONVENTIONS.md
+AGENT_INSTRUCTIONS.md
+AI_INSTRUCTIONS.md
+AI_RULES.md
+MODEL_INSTRUCTIONS.md
+COPILOT_INSTRUCTIONS.md
+CODEX_INSTRUCTIONS.md
+CURSOR_RULES.md
+CLAUDE_RULES.md
+GEMINI_RULES.md
+CHATGPT.md
+README_AI.md
+AI_README.md
+CHANGELOG_AI.md
+
+# Plans, tasks and working notes
+PLAN
+PLAN.md
+PLANS.md
+TODO.md
+TASKS.md
+IMPLEMENTATION_PLAN.md
+IMPLEMENTATION.md
+SCRATCH.md
+NOTES.md
+PROMPT.md
+PROMPTS.md
+PROMPT_TEMPLATE.md
+PROMPT_LIBRARY.md
+USER_PROMPT.md
+DEVELOPER_PROMPT.md
+THOUGHTS.md
+PROGRESS.md
+HANDOFF.md
+SUMMARY.md
+REVIEW_NOTES.md
+DECISIONS.md
+WORKLOG.md
+SESSION.md
+SESSION_NOTES.md
+BOOTSTRAP.md
+CONTEXT.md
+CONTEXTS.md
+
+# Agent skills, memory and rules
+SKILL.md
+TOOLS.md
+MEMORY.md
+RULES.md
+INSTRUCTIONS.md
+SYSTEM.md
+SYSTEM_PROMPT.md
+llms.txt
+llms-full.txt
+
+# Claude Code
+.claude
+
+# OpenAI Codex
+.codex
+
+# Cursor
+.cursor
+.cursorrules
+*.mdc
+
+# Windsurf
+.windsurf
+.windsurfrules
+
+# GitHub Copilot
+copilot-instructions.md
+.github/instructions
+*.instructions.md
+
+# Gemini
+.gemini
+
+# Cline
+.clinerules
+.cline
+
+# Roo Code
+.roo
+
+# Aider
+.aider
+.aider.conf.yml
+.aiderignore
+
+# Continue
+.continue
+
+# OpenCode
+opencode.json
+opencode.jsonc
+
+# Kiro
+.kiro
+
+# Junie
+.junie
+
+# Goose
+.goosehints
+.goose
+
+# Zed
+.rules
+
+# Amp
+.amp
+
+# Devin
+.devin
+
+# Generic agent folders
+.agents
+.agent
+
+# Your own names below

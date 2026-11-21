@@ -1,1 +1,3 @@
-recursive-include dscforge/templates *
+include dscforge/ai_phrases.txt
+include dscforge/leftover_files.txt
+include dscforge/known_packages.txt
